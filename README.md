@@ -2,23 +2,23 @@
 
 ## 1. 시연
 
-<img src="https://github.com/bloodmage1/Superresolution_Box/blob/main/app_img/home_capture.png"/>
+<img src="https://github.com/bloodmage1/SuperResol_box/blob/main/app_img/home_capture.png"/>
 
 실행했을 시 첫화면이다.
 
 ---
-<img src="https://github.com/bloodmage1/Superresolution_Box/blob/main/app_img/img_loaded.png"/>
+<img src="https://github.com/bloodmage1/SuperResol_box/blob/main/app_img/img_loaded.png"/>
 
 원하는 영상을 불러올 수 있다. 현재 업로드된 사용할 수 있는 파일은 videoo 폴더 안의 새 영상 3개다.
 
 ---
 
-<img src="https://github.com/bloodmage1/Superresolution_Box/blob/main/app_img/img_predicted.png"/>
+<img src="https://github.com/bloodmage1/SuperResol_box/blob/main/app_img/img_predicted.png"/>
 
 predict 버튼을 클릭하여 주어진 모델을 이용해, Resolution_improved_vid.mp4 파일을 생성할 수 있다. 이 파일은 무게가 약 267MB라 github에 올리지 못하지만, 만드는 과정을 보여주는 코드가 Restart-Copy1.ipynb에 저장되어 있다.
 
 ---
-<img src="https://github.com/bloodmage1/Superresolution_Box/blob/main/app_img/superresolution_result.gif"/>
+<img src="https://github.com/bloodmage1/SuperResol_box/blob/main/app_img/superresolution_result.gif"/>
 
 predict한 파일을 재생할 수 있다. 
 
