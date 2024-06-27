@@ -6,7 +6,6 @@ from PySide6.QtGui import *
 from PySide6.QtCore import *
 
 from qt_material import apply_stylesheet
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
 from time import time, sleep
 import os
@@ -138,7 +137,7 @@ class Improve_resolution(QMainWindow):
     def __init__(self, app):
         super().__init__()
         self.app = app
-        self.video_path = None  # video_path 초기화
+        self.video_path = None  
         self.cap = None
         self.cap_p = None
 
@@ -176,7 +175,7 @@ class Improve_resolution(QMainWindow):
         main_screen_layout = QVBoxLayout(main_screen_widget)
 
         self.label = QLabel(self)
-        self.label.setGeometry(10, 10, 256, 256)  # Set the QLabel size to fit the new window size
+        self.label.setGeometry(10, 10, 256, 256) 
         main_screen_layout.addWidget(self.label)
 
         self.play_button = QPushButton('Play', self)
