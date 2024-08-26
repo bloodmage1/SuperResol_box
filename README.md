@@ -67,7 +67,7 @@ source bird_resol_up/bin/activate
 ```
 python3 test.py\
     --classes_names_dict "{'bird': 1, 'fish': 2}"\
-    --dataset "./dataset_test/"\
+    --dataset "./videoo/"\
     --weights "./model/best_model_b7_3.pth"\
     --save_dir "./test_result/"\
     --patch_size 96\
@@ -98,7 +98,7 @@ Superresolution/
   
 ## 8. 각 함수의 기능 설명
  
-### Superresolution_model 클래스
+### Superresolution_model 
 
 - def detect_objects_in_video_and_save_frames
 
@@ -107,7 +107,7 @@ Superresolution/
   - 진행 상황을 업데이트하기 위해 progress_callback을 호출합니다.
   - 모든 프레임 처리가 완료되면, 이미지를 비디오 파일로 저장합니다.
   
-### ImproveResolution 클래스
+### ImproveResolution 
 
 - def update_progress
   - 진행 상황을 업데이트하여 프로그레스 바에 반영합니다.
@@ -117,7 +117,7 @@ Superresolution/
   - 스크롤 영역을 설정하고, 테마를 적용합니다.
   - 윈도우의 제목과 아이콘을 설정하고, 창의 크기를 설정한 후 창을 표시합니다.
 
-### OriginalVideo 클래스
+### OriginalVideo 
 - 원본 비디오를 표시할 위젯을 생성하고 반환합니다.
 - 비디오 표시를 위한 QLabel과 비디오 재생을 위한 재생 버튼을 설정합니다.
 - 비디오 캡처 객체와 비디오 프레임을 업데이트하기 위한 타이머를 초기화합니다.
@@ -133,7 +133,7 @@ Superresolution/
   - 비디오가 끝나면 타이머를 중지하고 비디오 캡처 객체를 해제합니다.
 
 
-### PredictVideo 클래스
+### PredictVideo 
 - 예측 비디오를 표시하는 위젯을 생성하고 반환합니다.
 - 비디오 표시를 위한 QLabel과 예측 비디오 재생을 시작하는 재생 버튼을 설정합니다.
 - 예측 비디오 프레임을 업데이트하기 위한 비디오 캡처 객체와 타이머를 초기화합니다.
@@ -147,7 +147,7 @@ Superresolution/
   - 프레임을 크기 조정하고 QImage로 변환하여 QLabel을 업데이트하여 프레임을 표시합니다.
   - 예측 비디오가 끝나면 타이머를 중지하고 비디오 캡처 객체를 해제합니다.
 
-### Controller 클래스
+### Controller 
 - 컨트롤 버튼(파일 로드, 예측, 삭제)이 있는 위젯을 생성하고 반환합니다.
 - 컨트롤 버튼의 레이아웃과 스타일을 설정합니다.
 - 버튼을 해당 메서드(Load_Video, Predict_image, Delete_image)에 연결합니다.
@@ -167,4 +167,8 @@ Superresolution/
   - 프로그레스 바를 초기화합니다.
 
 
+## 9. Errors I encountered
 
+If an error occurs, please contact us via email.
+
+breakprejudice@naver.com
