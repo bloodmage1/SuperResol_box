@@ -2,7 +2,7 @@
 
 ## 1. Demonstration
 
-This repository contains a tutorial of bird super reolution using Open Images Dataset and Pytorch Object Detection.
+This repository contains a tutorial of bird super reolution using Pytorch Object Detection.
 
 <img src="https://github.com/bloodmage1/SuperResol_box/blob/main/Demonstration/home_capture.png"/>
 
