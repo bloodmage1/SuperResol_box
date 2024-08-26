@@ -18,9 +18,7 @@ You can load the video you want. The currently uploaded and usable files are thr
 
 <img src="https://github.com/bloodmage1/SuperResol_box/blob/main/Demonstration/img_predicted.png"/>
 
-predict 버튼을 클릭하여 주어진 모델을 이용해, Resolution_improved_vid.mp4 파일을 생성할 수 있다. 이 파일은 무게가 약 267MB라 github에 올리지 못하지만, 만드는 과정을 보여주는 코드가 Restart-Copy1.ipynb에 저장되어 있다.
-
-You can click the predict button to create the 'Resolution_improved_vid.mp4' file using the given model.
+You can click the predict button to create the 'Resolution_improved_vid.mp4' file using the given model. The code that shows the process of making is stored in '/Restart-Copy1.ipynb'.
 
 ---
 <img src="https://github.com/bloodmage1/SuperResol_box/blob/main/Demonstration/superresolution_result.gif"/>
@@ -29,20 +27,19 @@ You can play predicted files.
 
 ## 2. Prepare Data
 
+Clone this repository with git clone https://github.com/bloodmage1/SuperResol_box.git.
+
+Video file is in the './videoo'
+
 ## 3. Setup the Environment
 
-The OS is ubuntu-18.04.
+The OS is ubuntu-18.04. A Dockerfile with all dependencies is provided. You can build it with
 
 ```
 docker build -t your_container:your_tag .
 ```
 
 ## 4. Prepare Model
-
-8. Docker 이미지 다운로드 docker pull yongyongdie/my_resol_model:latest
-9. Docker 이미지 실행 docker run –it —name your_container_name yongyongdie/my-hr-server:latest
-10, Docker 이미지의 모델 다운로드 docker cp your_container_name:/path/to/file /host/path/to/destination
-
 
 1. Connect to Model
 ```
@@ -77,9 +74,6 @@ python3 test.py\
     --resize 256\
     --individual 1
 ```
-
-
-
 
 ## 6. 개발환경
 
