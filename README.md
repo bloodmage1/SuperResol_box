@@ -1,15 +1,18 @@
-# Superresolution 애플리케이션 시연
+# Super_Resolution_Box
 
-## 1. 시연
+## 1. Demonstration
+
+This repository contains a tutorial of bird super reolution using Open Images Dataset and Pytorch Object Detection.
 
 <img src="https://github.com/bloodmage1/SuperResol_box/blob/main/Demonstration/home_capture.png"/>
 
-실행했을 시 첫화면이다.
+This is the first screen when you run the application.
 
 ---
 <img src="https://github.com/bloodmage1/SuperResol_box/blob/main/Demonstration/img_loaded.png"/>
 
-원하는 영상을 불러올 수 있다. 현재 업로드된 사용할 수 있는 파일은 videoo 폴더 안의 새 영상 3개다.
+
+You can load the video you want. The currently uploaded and usable files are three new videos in the 'videoo' folder.
 
 ---
 
@@ -17,18 +20,74 @@
 
 predict 버튼을 클릭하여 주어진 모델을 이용해, Resolution_improved_vid.mp4 파일을 생성할 수 있다. 이 파일은 무게가 약 267MB라 github에 올리지 못하지만, 만드는 과정을 보여주는 코드가 Restart-Copy1.ipynb에 저장되어 있다.
 
+You can click the predict button to create the 'Resolution_improved_vid.mp4' file using the given model.
+
 ---
 <img src="https://github.com/bloodmage1/SuperResol_box/blob/main/Demonstration/superresolution_result.gif"/>
 
-predict한 파일을 재생할 수 있다. 
+You can play predicted files.
 
-## 2. 개발환경
+## 2. Prepare Data
+
+## 3. Setup the Environment
+
+The OS is ubuntu-18.04.
+
+```
+docker build -t your_container:your_tag .
+```
+
+## 4. Prepare Model
+
+8. Docker 이미지 다운로드 docker pull yongyongdie/my_resol_model:latest
+9. Docker 이미지 실행 docker run –it —name your_container_name yongyongdie/my-hr-server:latest
+10, Docker 이미지의 모델 다운로드 docker cp your_container_name:/path/to/file /host/path/to/destination
+
+
+1. Connect to Model
+```
+docker pull yongyongdie/my_resol_model:latest
+```
+
+2. Pull Model
+```
+docker cp your_container_name:/app/best_model_b7_3.pth ./model_path_where_you_want
+```
+
+3. Setting
+```
+docker run -it -v /your_predicted_video:/app/test_result your_container
+```
+
+4. Enabling Python Environments
+
+```
+source bird_resol_up/bin/activate
+```
+
+## 5. Running test scripts in Docker containers
+
+```
+python3 test.py\
+    --classes_names_dict "{'bird': 1, 'fish': 2}"\
+    --dataset "./dataset_test/"\
+    --weights "./model/best_model_b7_3.pth"\
+    --save_dir "./test_result/"\
+    --patch_size 96\
+    --resize 256\
+    --individual 1
+```
+
+
+
+
+## 6. 개발환경
 
 - Window OS, Window 11
 - Python 3.8.7
 - PySide6
 
-## 3. 디렉토리 구조
+## 7. 디렉토리 구조
 
 ```
 Superresolution/
@@ -43,7 +102,7 @@ Superresolution/
     ├── model.py
 ```
   
-## 4. 각 함수의 기능 설명
+## 8. 각 함수의 기능 설명
  
 ### Superresolution_model 클래스
 
